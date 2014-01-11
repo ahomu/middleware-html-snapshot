@@ -1,0 +1,29 @@
+{
+  "name": "middleware-html-snapshot",
+  "version": "0.0.1",
+  "description": "Provide generating html snapshot (Express and Koa, support as middleware)",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -t 5000 ./test"
+  },
+  "keywords": [
+    "snapshot",
+    "express",
+    "koa",
+    "middleware",
+    "seo",
+    "crawler"
+  ],
+  "author": "ahomu",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "send": "~0.1.4",
+    "crypto": "0.0.3"
+  },
+  "devDependencies": {
+    "express": "~3.4.7",
+    "supertest": "~0.8.3",
+    "mocha": "~1.17.0"
+  }
+}
