@@ -8,8 +8,5 @@
 
 #TODO
 
-- Timeout
-- Settings
-- Refactoring > too much logic in middleware
 - Cache control
 - Support hashed fragment
