@@ -24,10 +24,10 @@ page.onCallback = function() {
 
 page.open(options.url, function (status) {
 
-  page.evaluate(function() {
+  page.evaluate(function(timeout) {
     setTimeout(function() {
       window.callPhantom();
-    }, 2000);
-  });
+    }, timeout);
+  }, options.timeout);
 
 });
