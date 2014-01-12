@@ -5,7 +5,7 @@ var request = require('supertest'),
     app;
 
 app = express();
-app.use(htmlSnapshot.express())
+app.use(htmlSnapshot.connect())
 app.use(express.static(__dirname + '/fixtures'))
 
 //app.listen(4000);

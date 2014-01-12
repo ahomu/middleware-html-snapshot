@@ -1,13 +1,14 @@
 {
   "name": "middleware-html-snapshot",
   "version": "0.0.1",
-  "description": "Provide generating html snapshot (Express and Koa, support as middleware)",
+  "description": "Provide generating html snapshot (Connect and Koa, support as middleware)",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha -t 5000 ./test"
   },
   "keywords": [
     "snapshot",
+    "connect",
     "express",
     "koa",
     "middleware",
