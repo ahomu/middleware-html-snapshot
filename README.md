@@ -9,4 +9,3 @@
 #TODO
 
 - Cache control
-- Support hashed fragment

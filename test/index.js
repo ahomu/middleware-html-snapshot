@@ -8,7 +8,6 @@ app = express();
 app.use(htmlSnapshot.connect())
 app.use(express.static(__dirname + '/fixtures'))
 
-//app.listen(4000);
 describe('GET phantomjs content', function(){
 
   it('respond with static content', function(done){
@@ -84,6 +83,21 @@ describe('GET phantomjs content', function(){
       .get('/notfound.html')
       .set('User-Agent', 'googlebot')
       .expect(404)
+      .expect('X-Powered-By', 'htmlsnapshot')
+      .end(function(err, res){
+        if (err) {
+          throw err;
+        }
+        done();
+      });
+  });
+
+  it('request with escaped fragment', function(done) {
+    request(app)
+      .get('/escaped-fragment.html?_escaped_fragment_=abrahadbra')
+      .set('User-Agent', 'googlebot')
+      .expect(200)
+      .expect(/Escaped Fragment/)
       .expect('X-Powered-By', 'htmlsnapshot')
       .end(function(err, res){
         if (err) {

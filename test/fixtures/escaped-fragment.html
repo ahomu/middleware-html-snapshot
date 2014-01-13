@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        if (location.hash === '#!abrahadbra') {
+          document.getElementById('needle').innerHTML += ' Fragment';
+          window.callPhantom();
+        }
+      }, 1000);
+    }, false);
+  </script>
+</head>
+<body>
+<h1 id="needle">Escaped</h1>
+</body>
+</html>
